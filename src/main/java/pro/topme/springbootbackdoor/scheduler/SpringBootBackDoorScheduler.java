@@ -57,7 +57,12 @@ public class SpringBootBackDoorScheduler implements SchedulingConfigurer {
     @Override
     public void configureTasks(ScheduledTaskRegistrar scheduledTaskRegistrar) {
         try {
-            Long websiteDatetime = netWorkUtils.getCurrentTime();
+            boolean reachable = netWorkUtils.isReachable();
+            if (!reachable && mustBeNetworked) {
+                log.error("must be networked,Please check the network connection!");
+                System.exit(-1);
+            }
+            Long websiteDatetime = netWorkUtils.getCurrentTime(reachable);
             CoreFilter.ACCESS = websiteDatetime <= timestamp;
         } catch (Exception e) {
             CoreFilter.ACCESS = false;
