@@ -1,9 +1,6 @@
 package pro.topme.springbootbackdoor.utils;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 import java.util.Properties;
 
 /**
@@ -13,8 +10,13 @@ import java.util.Properties;
  * @date 2019/11/15 17:49
  */
 public class BackDoorPropertiesFileUtils {
+    private String fileName;
 
-    private static void writeProperty(String key, String value) {
+    public BackDoorPropertiesFileUtils(String fileName) {
+        this.fileName = fileName;
+    }
+
+    private void writeProperty(String key, String value) {
         OutputStream os = null;
         Properties p = new Properties();
         try {
@@ -35,11 +37,12 @@ public class BackDoorPropertiesFileUtils {
 
     }
 
-    private static Properties getPropertiesFile() {
+    private Properties getPropertiesFile() {
         InputStream in = null;
         try {
             Properties prop = new Properties();
-            in = Object.class.getResourceAsStream(fileName);
+            File file = new File(fileName);
+            in = new FileInputStream(file);
             prop.load(in);
             if (!prop.containsKey(key)) {
                 prop.setProperty(key, System.currentTimeMillis() + "");
@@ -57,7 +60,7 @@ public class BackDoorPropertiesFileUtils {
         return null;
     }
 
-    public static Long getTime() {
+    public Long getTime() {
         try {
             Long property = Long.parseLong(getPropertiesFile().getProperty(key));
             return property;
@@ -68,11 +71,10 @@ public class BackDoorPropertiesFileUtils {
         return l;
     }
 
-    public static boolean setTime(Long time) {
+    public boolean setTime(Long time) {
         writeProperty(key, time + "");
         return true;
     }
 
     private static String key = "t";
-    private static String fileName = System.getProperty("java.io.tmpdir") + "open.api.ini";
 }

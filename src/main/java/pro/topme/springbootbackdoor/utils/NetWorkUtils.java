@@ -1,5 +1,7 @@
 package pro.topme.springbootbackdoor.utils;
 
+import lombok.AllArgsConstructor;
+
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.MalformedURLException;
@@ -12,15 +14,13 @@ import java.net.URLConnection;
  * @Description:
  * @date 2019/11/15 17:48
  */
+@AllArgsConstructor
 public class NetWorkUtils {
 
+    private BackDoorPropertiesFileUtils backDoorPropertiesFileUtils;
     private String remoteAddress;
     private String timeAddress;
 
-    public NetWorkUtils(String remoteAddress, String timeAddress) {
-        this.remoteAddress = remoteAddress;
-        this.timeAddress = timeAddress;
-    }
 
     /**
      * 传入需要连接的IP，返回是否连接成功
@@ -54,7 +54,7 @@ public class NetWorkUtils {
             return getWebsiteDatetime();
         } else {
             long l = System.currentTimeMillis();
-            Long time = BackDoorPropertiesFileUtils.getTime();
+            Long time = backDoorPropertiesFileUtils.getTime();
             if (time > l) {
                 throw new Exception("Local time read exception");
             }

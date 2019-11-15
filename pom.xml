@@ -21,6 +21,13 @@
     <url>https://github.com/xujakai/spring-boot-back-door</url>
     <description>spring-boot 项目安全控制，接私活利器（你懂的）</description>
 
+    <licenses>
+        <license>
+            <name>MIT</name>
+            <url>https://github.com/xujakai/spring-boot-back-door/blob/master/LICENSE</url>
+        </license>
+    </licenses>
+
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -53,15 +60,6 @@
     </dependencies>
 
     <!--以下是发布到Maven中央仓库用到的配置-->
-
-    <licenses>
-        <license>
-            <name>The Apache Software License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
-
     <scm>
         <tag>master</tag>
         <url>https://github.com/xujakai/spring-boot-back-door.git</url>
