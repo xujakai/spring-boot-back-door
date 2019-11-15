@@ -10,7 +10,7 @@
         <version>2.1.4.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>pro.topme</groupId>
+    <groupId>com.github.xujakai</groupId>
     <artifactId>spring-boot-back-door</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>spring-boot-back-door</name>
@@ -19,9 +19,15 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <url>https://github.com/xujakai/spring-boot-back-door</url>
-    <description>spring-boot 项目安全控制，接私活利器，防后小人（你懂的）</description>
+    <description>spring-boot 项目安全控制，接私活利器（你懂的）</description>
 
     <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.18</version>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
