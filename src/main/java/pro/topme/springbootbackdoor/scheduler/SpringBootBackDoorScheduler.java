@@ -13,9 +13,8 @@ import java.util.Date;
 
 /**
  * @author XuJiakai
- * @ClassName: SpringBootBackDoorScheduler
- * @Description: 定时任务
- * @date 2019/11/15 18:12
+ * 定时任务
+ *  2019/11/15 18:12
  */
 @Slf4j
 @Getter

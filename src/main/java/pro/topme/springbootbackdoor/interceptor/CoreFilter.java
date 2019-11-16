@@ -7,9 +7,8 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * @author XuJiakai
- * @ClassName: CoreFilter
- * @Description: 拦截
- * @date 2019/11/15 17:16
+ * 拦截
+ *  2019/11/15 17:16
  */
 public class CoreFilter implements HandlerInterceptor {
     public static boolean ACCESS = false;

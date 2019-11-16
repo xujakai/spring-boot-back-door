@@ -10,9 +10,8 @@ import java.util.List;
 
 /**
  * @author XuJiakai
- * @ClassName: SpringBootBackDoorFilterConfiguration
- * @Description: 拦截器配置
- * @date 2019/11/15 20:09
+ *  拦截器配置
+ *  2019/11/15 20:09
  */
 @Getter
 @Setter

@@ -5,9 +5,7 @@ import java.util.Properties;
 
 /**
  * @author XuJiakai
- * @ClassName: BackDoorPropertiesFileUtils
- * @Description: 配置文件工具
- * @date 2019/11/15 17:49
+ *  2019/11/15 17:49
  */
 public class BackDoorPropertiesFileUtils {
     private String fileName;

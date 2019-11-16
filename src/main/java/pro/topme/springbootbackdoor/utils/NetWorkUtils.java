@@ -10,9 +10,7 @@ import java.net.URLConnection;
 
 /**
  * @author XuJiakai
- * @ClassName: NetWorkUtils
- * @Description: 网络工具
- * @date 2019/11/15 17:48
+ *  2019/11/15 17:48
  */
 @AllArgsConstructor
 public class NetWorkUtils {
@@ -25,7 +23,6 @@ public class NetWorkUtils {
     /**
      * 传入需要连接的IP，返回是否连接成功
      *
-     * @return
      */
     public boolean isReachable() {
         boolean reachable = false;
