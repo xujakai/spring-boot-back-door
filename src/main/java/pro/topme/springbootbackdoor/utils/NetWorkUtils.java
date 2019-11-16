@@ -11,7 +11,7 @@ import java.net.URLConnection;
 /**
  * @author XuJiakai
  * @ClassName: NetWorkUtils
- * @Description:
+ * @Description: 网络工具
  * @date 2019/11/15 17:48
  */
 @AllArgsConstructor
@@ -61,6 +61,7 @@ public class NetWorkUtils {
             return l;
         }
     }
+
     public Long getCurrentTime() throws Exception {
         return getCurrentTime(isReachable());
     }

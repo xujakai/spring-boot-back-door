@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * @author XuJiakai
  * @ClassName: SpringBootBackDoorFilterConfiguration
- * @Description:
+ * @Description: 拦截器配置
  * @date 2019/11/15 20:09
  */
 @Getter

@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * @author XuJiakai
  * @ClassName: SpringBootBackDoorAutoConfiguration
- * @Description:
+ * @Description: 自动配置
  * @date 2019/11/15 19:41
  */
 @Configuration

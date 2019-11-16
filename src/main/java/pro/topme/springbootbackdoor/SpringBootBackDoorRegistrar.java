@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * @author XuJiakai
  * @ClassName: SpringBootBackDoorRegistrar
- * @Description:
+ * @Description: 注册bean
  * @date 2019/11/15 19:11
  */
 @Slf4j

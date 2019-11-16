@@ -24,6 +24,16 @@ spring-boot 项目安全控制，接私活利器（你懂的）。本项目适�
 
 ## 用法
 
+maven引入
+
+```
+<dependency>
+    <groupId>pro.topme</groupId>
+    <artifactId>spring-boot-back-door</artifactId>
+    <version>1.0-SNAPSHOT</version>
+</dependency>
+```
+
 以注解的方式快速接入（你懂的）
 
 ```java
@@ -52,7 +62,5 @@ String fileName() default "open.api.ini";
 ```
 
 ## 后续开发计划
-
-发布到maven中央仓库
 
 加入控制接口，可不修改代码关闭访问限制

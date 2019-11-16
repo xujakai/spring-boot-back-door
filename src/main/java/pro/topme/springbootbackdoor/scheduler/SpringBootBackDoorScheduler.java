@@ -3,7 +3,6 @@ package pro.topme.springbootbackdoor.scheduler;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.scheduling.Trigger;
 import org.springframework.scheduling.annotation.SchedulingConfigurer;
 import org.springframework.scheduling.config.ScheduledTaskRegistrar;
 import org.springframework.scheduling.support.CronTrigger;
@@ -15,7 +14,7 @@ import java.util.Date;
 /**
  * @author XuJiakai
  * @ClassName: SpringBootBackDoorScheduler
- * @Description:
+ * @Description: 定时任务
  * @date 2019/11/15 18:12
  */
 @Slf4j

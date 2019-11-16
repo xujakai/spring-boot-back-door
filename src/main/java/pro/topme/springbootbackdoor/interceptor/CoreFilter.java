@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * @author XuJiakai
  * @ClassName: CoreFilter
- * @Description:
+ * @Description: 拦截
  * @date 2019/11/15 17:16
  */
 public class CoreFilter implements HandlerInterceptor {
