@@ -30,7 +30,7 @@ maven引入
 <dependency>
     <groupId>pro.topme</groupId>
     <artifactId>spring-boot-back-door</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.1</version>
 </dependency>
 ```
 
