@@ -1,8 +1,8 @@
 <p align="center" style="font-size: 50px">spring-boot-back-door</p>
 <p align="center">
-	<!--a target="_blank" href="https://search.maven.org/search?q=JustAuth">
-		<img src="https://img.shields.io/badge/Maven Central-1.13.1-blue.svg" ></img>
-	</a -->
+	<a target="_blank" href="https://search.maven.org/search?q=spring-boot-back-door">
+		<img src="https://img.shields.io/badge/Maven Central-1.0.1-blue.svg" ></img>
+	</a>
 	<a target="_blank" href="https://github.com/xujakai/spring-boot-back-door/blob/master/LICENSE">
 		<img src="https://img.shields.io/apm/l/vim-mode.svg?color=yellow" ></img>
 	</a>
